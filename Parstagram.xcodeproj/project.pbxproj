@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,12 +12,15 @@
 		AF81823D04F06ECC42FB2369 /* Pods_Parstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84960F0578994CB6F065ACB0 /* Pods_Parstagram.framework */; };
 		FEFE34F823F8CC1A00457023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE34F723F8CC1A00457023 /* AppDelegate.swift */; };
 		FEFE34FA23F8CC1A00457023 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE34F923F8CC1A00457023 /* SceneDelegate.swift */; };
-		FEFE34FC23F8CC1A00457023 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE34FB23F8CC1A00457023 /* ViewController.swift */; };
 		FEFE34FF23F8CC1A00457023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFE34FD23F8CC1A00457023 /* Main.storyboard */; };
 		FEFE350123F8CC2400457023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEFE350023F8CC2400457023 /* Assets.xcassets */; };
 		FEFE350423F8CC2400457023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFE350223F8CC2400457023 /* LaunchScreen.storyboard */; };
 		FEFE350F23F8CC2400457023 /* ParstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE350E23F8CC2400457023 /* ParstagramTests.swift */; };
 		FEFE351A23F8CC2400457023 /* ParstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE351923F8CC2400457023 /* ParstagramUITests.swift */; };
+		FEFE352823F8D14800457023 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE352723F8D14800457023 /* LoginViewController.swift */; };
+		FEFE352A23F8D15800457023 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE352923F8D15800457023 /* FeedViewController.swift */; };
+		FEFE352C23F9C8CF00457023 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE352B23F9C8CF00457023 /* CameraViewController.swift */; };
+		FEFE352E23F9DD6F00457023 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE352D23F9DD6E00457023 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +53,6 @@
 		FEFE34F423F8CC1A00457023 /* Parstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFE34F723F8CC1A00457023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEFE34F923F8CC1A00457023 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FEFE34FB23F8CC1A00457023 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FEFE34FE23F8CC1A00457023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEFE350023F8CC2400457023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEFE350323F8CC2400457023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,10 @@
 		FEFE351523F8CC2400457023 /* ParstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFE351923F8CC2400457023 /* ParstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParstagramUITests.swift; sourceTree = "<group>"; };
 		FEFE351B23F8CC2400457023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEFE352723F8D14800457023 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FEFE352923F8D15800457023 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		FEFE352B23F9C8CF00457023 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		FEFE352D23F9DD6E00457023 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,6 @@
 				4BCB0B94F1693C4482555D0A /* Pods-ParstagramTests.debug.xcconfig */,
 				C47D3CBDE5853BB8BB2288D8 /* Pods-ParstagramTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,11 +147,14 @@
 			children = (
 				FEFE34F723F8CC1A00457023 /* AppDelegate.swift */,
 				FEFE34F923F8CC1A00457023 /* SceneDelegate.swift */,
-				FEFE34FB23F8CC1A00457023 /* ViewController.swift */,
 				FEFE34FD23F8CC1A00457023 /* Main.storyboard */,
 				FEFE350023F8CC2400457023 /* Assets.xcassets */,
 				FEFE350223F8CC2400457023 /* LaunchScreen.storyboard */,
 				FEFE350523F8CC2400457023 /* Info.plist */,
+				FEFE352723F8D14800457023 /* LoginViewController.swift */,
+				FEFE352923F8D15800457023 /* FeedViewController.swift */,
+				FEFE352B23F9C8CF00457023 /* CameraViewController.swift */,
+				FEFE352D23F9DD6E00457023 /* PostCell.swift */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
@@ -408,9 +416,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEFE34FC23F8CC1A00457023 /* ViewController.swift in Sources */,
+				FEFE352823F8D14800457023 /* LoginViewController.swift in Sources */,
+				FEFE352C23F9C8CF00457023 /* CameraViewController.swift in Sources */,
 				FEFE34F823F8CC1A00457023 /* AppDelegate.swift in Sources */,
+				FEFE352A23F8D15800457023 /* FeedViewController.swift in Sources */,
 				FEFE34FA23F8CC1A00457023 /* SceneDelegate.swift in Sources */,
+				FEFE352E23F9DD6F00457023 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
