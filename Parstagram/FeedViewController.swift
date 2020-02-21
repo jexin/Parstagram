@@ -15,30 +15,63 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [PFObject]()
+    var numberOfPost: Int!
+    let myRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myRefreshControl.addTarget(self, action: #selector(loadPosts), for: .valueChanged)
+        tableView.refreshControl = myRefreshControl
         
         tableView.delegate = self
         tableView.dataSource = self
-
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        loadPosts()
+    }
+    
+    @objc func loadPosts() {
+        numberOfPost = 20
         let query = PFQuery(className:"Posts")
         query.includeKey("author")
-        query.limit = 20
+        query.limit = numberOfPost
         
         query.findObjectsInBackground { (posts, error) in
             if posts != nil {
                 self.posts = posts!
                 self.tableView.reloadData()
-                
+                self.myRefreshControl.endRefreshing()
             }
         }
+    }
+    
+    @objc func loadMorePosts() {
+        let query = PFQuery(className:"Posts")
+        query.includeKey("author")
+        numberOfPost = numberOfPost + 20
+        query.limit = numberOfPost
+        
+        query.findObjectsInBackground { (posts, error) in
+            if posts != nil {
+                self.posts = posts!
+                self.tableView.reloadData()
+                self.myRefreshControl.endRefreshing()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == posts.count {
+            loadMorePosts()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 480
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
